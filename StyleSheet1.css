@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    background: url('Images/Background.png');
+    background-size: cover;
+}
+
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -480px;
+    margin-top: -275px;
+    /* left랑 top을 안 주면 top left가 50%씩이니까 중간부터 시작해서 우측 하단에 노란 영역이 생김 */
+    width: 960px;
+    height: 550px;
+    background: url('Images/Center_Background.png');
+}
+
+#container {
+    height: 500px;
+}
+
+#main_navigation>ul {
+    overflow: hidden;
+}
+
+#main_navigation>ul>li {
+    float: left;
+}
+
+/* 이거 무슨원리인지 모르겠음!!!  */
+
+#main_navigation>ul>li>a {
+    display: block;
+    width: 240px;
+    height: 50px;
+    line-height: 50px;
+    text-indent: -9999px;
+    background: url('Images/Navigation_Button.png');
+}
+
+#main_navigation>ul>li:nth-child(1)>a {
+    background-position: 0px 0px;
+}
+
+#main_navigation>ul>li:nth-child(2)>a {
+    background-position: 0px -100px;
+}
+
+#main_navigation>ul>li:nth-child(3)>a {
+    background-position: 0px -200px;
+}
+
+#main_navigation>ul>li:nth-child(4)>a {
+    background-position: 0px -300px;
+}
+
+#main_navigation>ul>li:nth-child(1)>a:hover {
+    background-position: 0px -50px;
+}
+
+#main_navigation>ul>li:nth-child(2)>a:hover {
+    background-position: 0px -150px;
+}
+
+#main_navigation>ul>li:nth-child(3)>a:hover {
+    background-position: 0px -250px;
+}
+
+#main_navigation>ul>li:nth-child(4)>a:hover {
+    background-position: 0px -350px;
+}
+
+#title {
+    position: absolute;
+    left: 0;
+    top: -48px;
+    width: 240px;
+    height: 48px;
+    overflow: hidden;
+}
+
+#title>h1 {
+    position: absolute;
+    left: 0;
+    top: 48px;
+    width: 240px;
+    height: 48px;
+    background: url("Images/Title_Images.png");
+    text-indent: -9999px;
+    transition-duration: 1s;
+    /*//css 애니메이션 효과 (1초동안 변화해라)*/
+}
+
+#title>h1.active {
+    top: 0;
+}
+
+#title>h1:nth-child(1) {
+    background-position: 0px 0px;
+}
+
+#title>h1:nth-child(2) {
+    background-position: 0px -48px;
+}
+
+#title>h1:nth-child(3) {
+    background-position: 0px -96px;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    padding: 0 40px;
+    margin-left: -40px;
+    height: 500px;
+    overflow: hidden;  /*//부모 영역을 벗어나면 숨겨라 */
+}
+
+div[data-name]{   /*//div중에 datat-name이 있으면 위치를 겹쳐있어라. */
+    position: absolute;
+    left:40px;
+    top:550px;
+    width:960px;
+    height: 500px;
+    transition-duration: 2s;
+}
+div[data-name].active{top:0;}
+
+div[data-name=main] > img{
+    position: absolute;
+    left: -50px;
+    bottom:0;
+}
+
+div[data-name=information] >img{
+    position: absolute;
+    left:20px;
+    top:20px;
+}
+div[data-name=information] >div {
+    position: absolute;
+    left:450px;
+    top:30px;
+    width:480px;
+}
+
+div[data-name=multimedia]{
+    padding:10px;
+}
+
+div[data-name=character] > a{  /*버튼부분*/
+    display: block;
+    width:40px;
+    height:40px;
+    text-indent:-9999px;
+    background:url("Images/Arrow_Images.png")
+}
+
+div[data-name=character] > a:nth-child(1){  /*첫번째버튼*/
+     background-position: 0 0;
+     position: absolute;
+     left: 10px;
+     top:50%;
+     margin-top: -20px;
+}
+
+div[data-name=character] > a:nth-child(2){  /*두번째버튼*/
+    background-position: 0 -40px;
+    position: absolute;
+    right: 10px;
+
+    /*아래 두 개는 딱 가운데에 위치시킬려고*/
+    top:50%;
+    margin-top: -20px;
+}
+
+div[data-name=character] > article{
+    width: 960px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 500px;
+    transition-duration: 2s;
+}
+
+div[data-name=character] >article.show{
+    top:0;
+}
+
+
+article{position: relative;}
+article >h1{
+
+    position: absolute;
+    left:90px;
+    top:40px;
+    font-size: 30px;
+}
+article > img:nth-of-type(1){  /*서명부분*/
+    position: absolute;
+    left:200px;
+    top:50px;
+}
+
+article > img:nth-of-type(2){  /*사람이미지부분*/
+    position: absolute;
+    left:100px;
+    top:120px;
+    box-shadow: 0 5px 10px 0px;
+    border-radius: 10px;
+}
+
+article >p{
+    position: absolute;
+    left: 400px;
+    top:110px;
+    width:500px;
+}
+
+a{
+    z-index: 9999;
+}

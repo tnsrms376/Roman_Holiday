@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Holiday</title>
+    <link rel="stylesheet" href="StyleSheet1.css" />
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src="movie1.js"></script>
+
+</head>
+
+<body>
+    <hgroup id="title">
+        <h1 data-name="information">Information</h1>
+        <h1 data-name="character">Character</h1>
+        <h1 data-name="multimedia">Multimedia</h1>
+        <!-- 아래 section그룹에 있는 data-name=""속성이랑 똑같은걸 확인할 수 있다. -->
+    </hgroup>
+
+    <section id="container">
+        <div id="main" data-name="main" class="active">
+            <img src="Images/Middle_Foreground.png"/>
+        </div>
+        <div id="information" data-name="information">
+            <img src="Images/Information_Image.png"/>
+            <div class="description">
+                <p>로마를 방문한 어느 나라의 왕녀(오드리 헵번)는 꽉 짜인 행동계획에 진력이 나서 어느날 밤 남몰래 숙소인 대사관을 빠져 나가지만, 시의(侍醫)가 놓아 준 진정제 주사가 효과를 나타내어 벤치에서 깜박 잠들고 만다. 그곳을 지나가게 된 미국의 통신기자 조(그레고리 펙)는 그녀를 하숙으로 옮겨 편히 자게 하는데, 이튿날 그녀가 왕녀임을 알게 되자 즐겁게 로마를 관광하면서도 친구인 사진사를 시켜 그녀 몰래 사진을찍게 한다. 하지만 그녀에게 은밀한 애정을 품기 시작한 그는 기자회견 때 특종으로 다룰 것을 단념하고 사진을 그녀에게 건네주며 작별을 고한다.
+
+                </p>
+            </div>
+        </div>
+        <div id="character" data-name="character">
+            <a href="#">left Button</a>
+            <a href="#">right Button</a>
+            <article class="show">
+                <h1>Princess Ann</h1>
+                <img src="Images/Character_Text_1.png"/>
+                <img src="Images/Character_1.png"/>
+                <p>오드리 햅번은~ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi blanditiis sed, asperiores quam id sapiente atque placeat quia labore molestiae hic quibusdam voluptates praesentium, ipsa error pariatur maxime dicta consectetur!</p>
+            </article>
+            <article>
+                <h1>Joe Bradley</h1>
+                <img src="Images/Character_Text_2.png"/>
+                <img src="Images/Character_2.png"/>
+                <p>조 브래들리는 ~ Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto reiciendis in, cum, perferendis pariatur illum quisquam, ratione sit dolor eligendi excepturi cumque veritatis facilis architecto nam omnis. Magni, debitis reprehenderit!</p>
+            </article>
+            <article>
+                <h1>Radovich</h1>
+                <img src="Images/Character_Text_3.png"/>
+                <img src="Images/Character_3.png"/>
+                <p>라도비치는~ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit nam asperiores, facere maiores culpa quidem! Eaque asperiores reprehenderit inventore. Laborum officiis voluptates consequatur suscipit esse minus, deleniti ipsam rerum illo.</p>
+            </article>
+
+        </div>
+        <div id="multimedia" data-name="multimedia">
+            <iframe width="940" height="480" src="https://www.youtube.com/embed/U_FjmOn55pE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+
+
+    </section>
+
+    <nav id="main_navigation">
+        <ul>
+            <li><a href="#" data-target="information">Movie Info</a></li>
+            <li><a href="#" data-target="character">Character</a></li>
+            <li><a href="#" data-target="multimedia">Multimedia</a></li>
+            <li><a href="#">Download</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
